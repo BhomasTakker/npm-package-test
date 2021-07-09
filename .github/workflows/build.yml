@@ -52,7 +52,7 @@ jobs:
         node-version: 14.x
         registry-url: https://npm.pkg.github.com/
         scope: "@TwoFux"
-    - run: echo "registry=https://npm.pkg.github.com/" >> .npmrc
+    - run: echo "registry=https://npm.pkg.github.com/@twofux" >> .npmrc
     - run: npm publish $(ls *.tgz)
       env: 
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
